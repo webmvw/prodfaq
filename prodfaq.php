@@ -31,7 +31,7 @@ if ( ! defined( 'PRODFAQ_URL' ) ) {
 }
 
 if ( ! defined( 'PRODFAQ_VERSION' ) ) {
-    define( 'PRODFAQ_VERSION', time() ); // for development, change to '1.0.0' for production
+    define( 'PRODFAQ_VERSION', '1.0.0' );
 }
 
 
