@@ -1,0 +1,58 @@
+
+/* === ProdFAQ Frontend === */
+.prodfaq-frontend {
+    margin-top: 40px;
+    border-top: 1px solid #e5e7eb;
+    padding: 20px;
+    background: #f5f8f7;
+    margin-bottom: 40px;
+}
+
+.prodfaq-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.prodfaq-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.prodfaq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #22272e;
+}
+
+.prodfaq-icon {
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.prodfaq-answer {
+    display: none;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.6;
+    background: #f9fafb;
+}
+
+
+.active > .prodfaq-question {
+    background-color: #045cb4;
+    color:#ffffff;
+}
