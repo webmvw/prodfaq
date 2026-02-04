@@ -83,20 +83,24 @@ class Admin{
     public function enqueue_admin_scripts() {
         // Only load scripts on product edit screen
         $screen = get_current_screen();
-        if ( $screen->id !== 'product' ) {
-            return;
-        }
-        wp_enqueue_style( 'prodfaq-admin-style', PRODFAQ_URL . 'assets/admin/css/admin-style.css', [], $this->version );
-        wp_enqueue_script( 'prodfaq-admin-script', PRODFAQ_URL . 'assets/admin/js/admin-script.js', [ 'jquery' ], $this->version, true );
-        
-        // pass faq count to JS
-        $faqs = get_post_meta( get_the_ID(), '_prodfaq_items', true );
-        $faqs = is_array( $faqs ) ? $faqs : [];
+        if ( $screen->id == 'product' ) {
+            wp_enqueue_style( 'prodfaq-admin-style', PRODFAQ_URL . 'assets/admin/css/admin-style.css', [], $this->version );
+            wp_enqueue_script( 'prodfaq-admin-script', PRODFAQ_URL . 'assets/admin/js/admin-script.js', [ 'jquery' ], $this->version, true );
+            
+            // pass faq count to JS
+            $faqs = get_post_meta( get_the_ID(), '_prodfaq_items', true );
+            $faqs = is_array( $faqs ) ? $faqs : [];
 
-        wp_localize_script( 'prodfaq-admin-script', 'prodfaqData', [
-            'ajax_url' => admin_url( 'admin-ajax.php' ),
-            'faqs' => count( $faqs ),
-        ] );
+            wp_localize_script( 'prodfaq-admin-script', 'prodfaqData', [
+                'ajax_url' => admin_url( 'admin-ajax.php' ),
+                'faqs' => count( $faqs ),
+            ] );
+        }
+
+        // settings page styles
+        if ( isset( $_GET['page'] ) && $_GET['page'] === 'prodfaq-settings' ) {
+            wp_enqueue_style( 'prodfaq-settings-style', PRODFAQ_URL . 'assets/admin/css/settings-style.css', [], $this->version );
+        }
     }
 
     /**

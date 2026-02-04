@@ -1,0 +1,118 @@
+
+.prodfaq-settings-flex {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start
+}
+
+
+.prodfaq-settings-wrap {
+    max-width: 900px;
+}
+
+/* ======== Settings Card styling ======== */
+.prodfaq-card {
+    background: #fff;
+    border: 1px solid #e2e4e7;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.prodfaq-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.prodfaq-field:last-child {
+    border-bottom: none;
+}
+
+.prodfaq-field label {
+    max-width: 60%;
+}
+
+.prodfaq-field select {
+    min-width: 220px;
+}
+
+.field-desc {
+    display: block;
+    font-size: 13px;
+    color: #646970;
+    margin-top: 4px;
+}
+
+/* ======== Author Box styling ======== */
+.prodfaq-author-box {
+    width: 250px;
+    background: #fff;
+    border: 1px solid #e2e4e7;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top:20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-size: 14px;
+    text-align: center;
+}
+
+.prodfaq-author-box > .author-profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* circular */
+    border: 2px solid #2271b1;
+    margin-bottom: 12px;
+}
+
+.prodfaq-author-box h2 {
+    font-size: 16px;
+    margin: 8px 0 6px 0;
+}
+
+.prodfaq-author-box p {
+    margin: 6px 0;
+}
+
+.prodfaq-author-box .button {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* ======== author social style ======== */
+.prodfaq-author-box .author-social {
+    margin: 12px 0;
+}
+
+.prodfaq-author-box .author-social a {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 20px; /* Dashicons size */
+    color: #2271b1;  /* Primary color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.prodfaq-author-box .author-social a img{
+    width: 20px;
+}
+
+.author-social a:hover {
+    color: #00a0d2; /* Hover color */
+}
+
+
+/* ======== Responsive ======== */
+@media screen and (max-width: 900px) {
+    .prodfaq-settings-flex {
+        flex-direction: column;
+    }
+
+    .prodfaq-author-box {
+        width: 100%;
+    }
+}
+
