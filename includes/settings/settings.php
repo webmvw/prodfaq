@@ -28,7 +28,7 @@ class Settings {
             <p class="description"><?php esc_html_e( 'Configure how FAQs appear on your product pages.', 'prodfaq' ); ?></p>
 
             <!-- success message when settings are saved -->
-            <?php if ( isset( $_GET['settings-updated'] ) && $_GET['settings-updated'] ): ?>
+            <?php if ( isset( $_GET['settings-updated'] ) && sanitize_text_field( wp_unslash( $_GET['settings-updated'] ) ) === 'true' ): ?>
                 <div id="message" class="updated notice is-dismissible">
                     <p><?php esc_html_e( 'Settings saved successfully.', 'prodfaq' ); ?></p>
                 </div>

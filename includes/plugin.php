@@ -52,10 +52,50 @@ final class Plugin {
      * Register plugin settings
      */
     public function prodfaq_register_settings() {
-        register_setting( 'prodfaq_settings', 'prodfaq_enabled' );
-        register_setting( 'prodfaq_settings', 'prodfaq_position' );
-        register_setting( 'prodfaq_settings', 'prodfaq_design' );
-        register_setting( 'prodfaq_settings', 'prodfaq_hide_out_of_stock' );
+        register_setting( 'prodfaq_settings', 'prodfaq_enabled', [ $this, 'prodfaq_sanitize_enabled' ] );
+        register_setting( 'prodfaq_settings', 'prodfaq_position', [ $this, 'prodfaq_sanitize_position' ] );
+        register_setting( 'prodfaq_settings', 'prodfaq_design', [ $this, 'prodfaq_sanitize_design' ] );
+        register_setting( 'prodfaq_settings', 'prodfaq_hide_out_of_stock', [ $this, 'prodfaq_sanitize_hide_out_of_stock' ] );
+    }
+
+    /**
+     * Sanitize for enabled setting
+     */
+    public function prodfaq_sanitize_enabled( $input ) {
+        return in_array( $input, array( 'yes', 'no' ), true ) ? $input : 'yes';
+    } 
+
+    /**
+     * Sanitize for position setting
+     */
+    public function prodfaq_sanitize_position( $input ) {
+        $allowed = array(
+            'after_summary',
+            'after_tabs',
+            'before_related',
+        );
+
+        return in_array( $input, $allowed, true ) ? $input : 'after_summary';
+    }
+
+    /**
+     * Sanitize for hide out of stock setting
+     */
+    public function prodfaq_sanitize_hide_out_of_stock( $input ) {
+        return in_array( $input, array( 'yes', 'no' ), true ) ? $input : 'no';
+    }
+
+    /**
+     * Sanitize for design setting
+     */
+    public function prodfaq_sanitize_design( $input ) {
+        $allowed = array(
+            'accordion',
+            'card',
+            'list',
+        );
+
+        return in_array( $input, $allowed, true ) ? $input : 'accordion';
     }
 
     /**

@@ -36,7 +36,13 @@ class Admin{
         }
 
         // Verify that the nonce is valid.
-        if ( ! wp_verify_nonce( $_POST['prodfaq_nonce'], 'prodfaq_save_meta' ) ) {
+        if (
+            ! isset( $_POST['prodfaq_nonce'] ) ||
+            ! wp_verify_nonce(
+                sanitize_text_field( wp_unslash( $_POST['prodfaq_nonce'] ) ),
+                'prodfaq_save_meta'
+            )
+        ) {
             return;
         }
 
@@ -60,7 +66,9 @@ class Admin{
         if ( isset( $_POST['prodfaq'] ) && is_array( $_POST['prodfaq'] ) ) {
             $faqs = [];
 
-            foreach ( $_POST['prodfaq'] as $faq ) {
+            $raw_faqs = wp_unslash( $_POST['prodfaq'] );
+
+            foreach ( $raw_faqs as $faq ) {
                 if ( empty( $faq['question'] ) && empty( $faq['answer'] ) ) {
                     continue;
                 }
@@ -93,7 +101,7 @@ class Admin{
 
             wp_localize_script( 'prodfaq-admin-script', 'prodfaqData', [
                 'ajax_url' => admin_url( 'admin-ajax.php' ),
-                'faqs' => count( $faqs ),
+                'faqs' => (int) count( $faqs ),
             ] );
         }
 
@@ -131,10 +139,10 @@ class Admin{
             <?php if ( ! empty( $faqs ) && is_array( $faqs ) ) : ?>
                 <?php foreach ( $faqs as $index => $faq ) : ?>
                     <div class="prodfaq-row">
-                        <input type="text" name="prodfaq[<?php echo $index; ?>][question]" placeholder="Question"
+                        <input type="text" name="prodfaq[<?php echo esc_attr( $index ); ?>][question]" placeholder="Question"
                             value="<?php echo esc_attr( $faq['question'] ?? '' ); ?>" />
                         
-                        <textarea name="prodfaq[<?php echo $index; ?>][answer]" placeholder="Answer"><?php 
+                        <textarea name="prodfaq[<?php echo esc_attr( $index ); ?>][answer]" placeholder="Answer"><?php 
                             echo esc_textarea( $faq['answer'] ?? '' ); 
                         ?></textarea>
 

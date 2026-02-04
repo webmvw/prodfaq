@@ -8,7 +8,6 @@
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: prodfaq
- * Domain Path: /languages
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -33,19 +32,6 @@ if ( ! defined( 'PRODFAQ_URL' ) ) {
 if ( ! defined( 'PRODFAQ_VERSION' ) ) {
     define( 'PRODFAQ_VERSION', '1.0.0' );
 }
-
-
-/**
- * Load text domain
- */
-function prodfaq_load_textdomain() {
-    load_plugin_textdomain(
-        'prodfaq',
-        false,
-        dirname( plugin_basename( __FILE__ ) ) . '/languages'
-    );
-}
-add_action( 'plugins_loaded', 'prodfaq_load_textdomain' );
 
 
 /**

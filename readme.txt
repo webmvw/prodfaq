@@ -1,9 +1,9 @@
-=== ProdFAQ – Product FAQs for WooCommerce ===
+======== ProdFAQ – Product FAQs for WooCommerce ========
+Plugin Name: ProdFAQ - Product FAQs for WooCommerce
 Contributors: webmvw
-Donate link: https://devsmasudrana.com
 Tags: woocommerce, faq, product faq, accordion, product questions
 Requires at least: 5.8
-Tested up to: 6.4
+Tested up to: 6.9
 Stable tag: 1.0.0
 Requires PHP: 7.4
 License: GPLv2 or later
