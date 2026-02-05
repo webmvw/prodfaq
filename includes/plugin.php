@@ -71,8 +71,7 @@ final class Plugin {
     public function prodfaq_sanitize_position( $input ) {
         $allowed = array(
             'after_summary',
-            'after_tabs',
-            'before_related',
+            'inside_tabs',
         );
 
         return in_array( $input, $allowed, true ) ? $input : 'after_summary';

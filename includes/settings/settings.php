@@ -65,11 +65,8 @@ class Settings {
                                 <option value="after_summary" <?php selected( $position, 'after_summary' ); ?>>
                                     <?php esc_html_e( 'After Product Summary', 'prodfaq' ); ?>
                                 </option>
-                                <option value="after_tabs" <?php selected( $position, 'after_tabs' ); ?>>
-                                    <?php esc_html_e( 'After Product Tabs', 'prodfaq' ); ?>
-                                </option>
-                                <option value="before_related" <?php selected( $position, 'before_related' ); ?>>
-                                    <?php esc_html_e( 'Before Related Products', 'prodfaq' ); ?>
+                                <option value="inside_tabs" <?php selected( $position, 'inside_tabs' ); ?>>
+                                    <?php esc_html_e( 'Inside Product Tabs', 'prodfaq' ); ?>
                                 </option>
                             </select>
                         </div>
