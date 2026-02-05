@@ -1,4 +1,8 @@
 <?php 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
+}
+
 global $product;
 
 $faqs = get_post_meta( $product->get_id(), '_prodfaq_items', true );

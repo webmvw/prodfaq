@@ -1,6 +1,6 @@
 ======== ProdFAQ – Product FAQs for WooCommerce ========
 Plugin Name: ProdFAQ - Product FAQs for WooCommerce
-Contributors: webmvw
+Contributors: ranapress
 Tags: woocommerce, faq, product faq, accordion, product questions
 Requires at least: 5.8
 Tested up to: 6.9
@@ -11,21 +11,26 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-ProdFAQ is a lightweight WooCommerce extension that allows you to add product-specific FAQs directly from the product edit screen.  
-Display FAQs in a clean accordion layout on single product pages to improve customer experience and reduce pre-sale questions.
+ProdFAQ is a lightweight and flexible WooCommerce extension that lets you add product-specific FAQs directly from the product edit screen.
 
-This plugin is built with simplicity, performance, and WordPress coding standards in mind.
+With ProdFAQ, store owners can answer common customer questions right on the single product page—helping reduce pre-sale inquiries, improve clarity, and boost customer confidence.
+
+The plugin is built with performance, simplicity, and WordPress coding standards in mind, making it easy to use for beginners and extensible for developers.
 
 == Features ==
 
 * Add unlimited FAQs per WooCommerce product
 * Simple and intuitive admin meta box UI
-* Clean accordion-style frontend output
-* SEO-friendly structure
-* Lightweight and fast
-* No external dependencies
-* Fully translatable
-* Developer-friendly and extendable
+* Multiple FAQ display styles:
+    -> Accordion
+    -> Card style
+    -> List style
+* Control FAQ position on the single product page
+* Clean and responsive frontend design
+* SEO-friendly HTML structure
+* Lightweight and fast — no external libraries
+* Fully translation-ready
+* Developer-friendly and extensible
 
 == Requirements ==
 
@@ -39,7 +44,7 @@ This plugin is built with simplicity, performance, and WordPress coding standard
 2. Activate the plugin through the **Plugins** menu in WordPress.
 3. Make sure WooCommerce is installed and active.
 4. Edit any WooCommerce product and find the **Product FAQs** meta box.
-5. Add questions and answers, then update the product.
+5. Scroll down to the Product FAQs meta box, add your FAQs, and update the product.
 
 == Usage ==
 
@@ -72,15 +77,18 @@ Yes. The plugin is fully translation-ready using the `prodfaq` text domain.
 
 1. Product FAQ meta box in the WooCommerce product editor
 2. Adding multiple FAQs in the admin panel
-3. FAQ accordion display on the single product page
+3. FAQ display on the single product page
+4. ProdFAQ settings page for position and design control
 
 == Changelog ==
 
 = 1.0.0 =
 * Initial release
 * Product-specific FAQ meta box
-* Frontend FAQ accordion output
+* Multiple FAQ display styles
+* FAQ position control
 * WooCommerce dependency check
+* Clean and responsive frontend output
 
 == Upgrade Notice ==
 
