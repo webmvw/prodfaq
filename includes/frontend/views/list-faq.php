@@ -1,0 +1,30 @@
+
+<?php 
+global $product;
+
+$faqs = get_post_meta( $product->get_id(), '_prodfaq_items', true );
+
+if ( ! is_array( $faqs ) || empty( $faqs ) ) {
+    return;
+}
+?>
+
+<div class="prodfaq-frontend">
+    <h3 class="prodfaq-title">
+        <?php esc_html_e( 'Frequently Asked Questions', 'prodfaq' ); ?>
+    </h3>
+
+    <div class="prodfaq-list-wrapper">
+
+        <?php foreach ( $faqs as $faq ) : ?>
+            <?php if ( empty( $faq['question'] ) || empty( $faq['answer'] ) ) continue; ?>
+            <div class="prodfaq-list-item">
+                <h4 class="prodfaq-list-question"><?php echo esc_html( $faq['question'] ); ?></h4>
+                <div class="prodfaq-list-answer">
+                    <p> <?php echo wp_kses_post( wpautop( $faq['answer'] ) ); ?> </p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
+    </div>
+</div>

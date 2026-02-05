@@ -51,6 +51,8 @@ class Frontend{
         $design = get_option( 'prodfaq_design', 'accordion' );
         if ( $design === 'card' ) {
             wp_enqueue_style( 'prodfaq-card-style', PRODFAQ_URL . 'assets/frontend/css/prodfaq-card-style.css', [], $this->version );
+        }else if ( $design === 'list' ) {
+            wp_enqueue_style( 'prodfaq-list-style', PRODFAQ_URL . 'assets/frontend/css/prodfaq-list-style.css', [], $this->version );
         } else {
             wp_enqueue_style( 'prodfaq-frontend-style', PRODFAQ_URL . 'assets/frontend/css/prodfaq-styles.css', [], $this->version );
             wp_enqueue_script( 'prodfaq-frontend-script', PRODFAQ_URL . 'assets/frontend/js/prodfaq-scripts.js', [ 'jquery' ], $this->version, true );
@@ -110,6 +112,8 @@ class Frontend{
 
                 if ( $design === 'card' ) {
                     require_once plugin_dir_path( __FILE__ ) . 'views/card-faq.php';
+                }else if ( $design === 'list' ) {
+                    require_once plugin_dir_path( __FILE__ ) . 'views/list-faq.php';
                 } else {
                     require_once plugin_dir_path( __FILE__ ) . 'views/accordian-faq.php';
                 } 
