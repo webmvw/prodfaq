@@ -66,7 +66,7 @@ class Admin{
         if ( isset( $_POST['prodfaq'] ) && is_array( $_POST['prodfaq'] ) ) {
             $faqs = [];
 
-            $raw_faqs = wp_unslash( $_POST['prodfaq'] );
+            $raw_faqs = sanitize_text_field( wp_unslash( $_POST['prodfaq'] ) );
 
             foreach ( $raw_faqs as $faq ) {
                 if ( empty( $faq['question'] ) && empty( $faq['answer'] ) ) {

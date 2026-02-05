@@ -17,6 +17,9 @@ With ProdFAQ, store owners can answer common customer questions right on the sin
 
 The plugin is built with performance, simplicity, and WordPress coding standards in mind, making it easy to use for beginners and extensible for developers.
 
+== Short Description ==
+Add product-specific FAQ accordion to WooCommerce single product pages.
+
 == Features ==
 
 * Add unlimited FAQs per WooCommerce product

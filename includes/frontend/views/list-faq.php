@@ -5,9 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-$faqs = get_post_meta( $product->get_id(), '_prodfaq_items', true );
+$prodfaqs = get_post_meta( $product->get_id(), '_prodfaq_items', true );
 
-if ( ! is_array( $faqs ) || empty( $faqs ) ) {
+if ( ! is_array( $prodfaqs ) || empty( $prodfaqs ) ) {
     return;
 }
 ?>
@@ -19,12 +19,12 @@ if ( ! is_array( $faqs ) || empty( $faqs ) ) {
 
     <div class="prodfaq-list-wrapper">
 
-        <?php foreach ( $faqs as $faq ) : ?>
-            <?php if ( empty( $faq['question'] ) || empty( $faq['answer'] ) ) continue; ?>
+        <?php foreach ( $prodfaqs as $prodfaq ) : ?>
+            <?php if ( empty( $prodfaq['question'] ) || empty( $prodfaq['answer'] ) ) continue; ?>
             <div class="prodfaq-list-item">
-                <h4 class="prodfaq-list-question"><?php echo esc_html( $faq['question'] ); ?></h4>
+                <h4 class="prodfaq-list-question"><?php echo esc_html( $prodfaq['question'] ); ?></h4>
                 <div class="prodfaq-list-answer">
-                    <p> <?php echo wp_kses_post( wpautop( $faq['answer'] ) ); ?> </p>
+                    <p> <?php echo wp_kses_post( wpautop( $prodfaq['answer'] ) ); ?> </p>
                 </div>
             </div>
         <?php endforeach; ?>
