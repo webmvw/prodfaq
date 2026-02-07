@@ -1,9 +1,10 @@
 <?php
 /**
  * Plugin Name: ProdFAQ - Product FAQs for WooCommerce
+ * Plugin URI: https://wordpress.org/plugins/prodfaq
  * Description: Add product-specific FAQ accordion to WooCommerce single product pages.
- * Author: Masud Rana
- * Author URI: https://devsmasudrana.com
+ * Author: ranapress
+ * Author URI: https://profiles.wordpress.org/ranapress/
  * Version: 1.0.0
  * License: GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt

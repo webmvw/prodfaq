@@ -1,4 +1,4 @@
-======== ProdFAQ – Product FAQs for WooCommerce ========
+======== ProdFAQ - Product FAQs for WooCommerce ========
 Plugin Name: ProdFAQ - Product FAQs for WooCommerce
 Contributors: ranapress
 Tags: woocommerce, faq, product faq, accordion, product questions
@@ -9,16 +9,17 @@ Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-== Description ==
-
-ProdFAQ is a lightweight and flexible WooCommerce extension that lets you add product-specific FAQs directly from the product edit screen.
-
-With ProdFAQ, store owners can answer common customer questions right on the single product page—helping reduce pre-sale inquiries, improve clarity, and boost customer confidence.
-
-The plugin is built with performance, simplicity, and WordPress coding standards in mind, making it easy to use for beginners and extensible for developers.
+Add product-specific FAQ accordion to WooCommerce single product pages.
 
 == Short Description ==
 Add product-specific FAQ accordion to WooCommerce single product pages.
+
+
+== Description ==
+ProdFAQ is a lightweight and flexible WooCommerce extension that lets you add product-specific FAQs directly from the product edit screen.
+With ProdFAQ, store owners can answer common customer questions right on the single product page—helping reduce pre-sale inquiries, improve clarity, and boost customer confidence.
+The plugin is built with performance, simplicity, and WordPress coding standards in mind, making it easy to use for beginners and extensible for developers.
+
 
 == Features ==
 
